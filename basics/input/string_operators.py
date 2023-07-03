@@ -5,3 +5,6 @@ print("Healt has been set.\n")
 print(f"Lives:\t", lives * "♥")
 print(f"Energy:\t", energy * "♦")
 print(f"Shield:\t", shield * "♦")
+
+print("Lives:\t" + "\u2764"* lives)
+print(f"Lives:\t" + lives * "♥")
