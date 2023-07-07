@@ -1,13 +1,6 @@
-
-paint = input("Towards which direction should I paint ( up, down, left or right)? ")
-if paint == "up":
-    print("I'm painting up")
-
-elif paint == "down":
-    print("I'm painting down")
-
-elif paint == "left":
-    print("I'm painting left")
-
-elif paint == "right":
-    print("I'm painting right")
+i = input("what type of adventure should I have? ")
+if i == "scary" or i == "short":
+    print("Entering the dark forest")
+elif i =="safe" or i == "long":
+    print("Taking the safe route")
+else :print("not sure which route to take")

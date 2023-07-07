@@ -4,5 +4,5 @@ print("#"*10)
 for i in range(4,9):
     print(f"carrot n {i}")
 print("#"*10)
-for i in range(100, 20, 11):
+for i in range(100, 20, -11):
     print(f"Tomato {i}")
