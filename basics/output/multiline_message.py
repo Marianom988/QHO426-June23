@@ -1,0 +1,10 @@
+def run2():
+    print("System Failure Imminent!")
+    print("System reboot has been initiated...")
+    print()
+    print("...Rebooting sensory system")
+    print("...Rebooting output motors")
+    print("...Rebooting hover engine")
+    print()
+    print("System Online.")
+    run2()
