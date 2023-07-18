@@ -41,7 +41,7 @@ def run():
                     n_mark = float(input("Enter new mark: "))
                     s_list.remove(student)
                     s_list.append((name, n_mark))
-                else:
-                    print("No such option. Try again. Fool!")
+        else:
+            print("No such option. Try again. Fool!")
 
 run()
