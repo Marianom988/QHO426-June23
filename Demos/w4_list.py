@@ -6,7 +6,7 @@ yummy = ["pizza", "mozzarella", "chocolate"]
 
 print(yummy)
 #Print a single item . il primo item della lista e' il numero 0
-print(yummy[-2])
+print(yummy[2])
 #print some item from the list i due punti significano "fino a" in questo caso da 1 a 3
 print(yummy[::-1]) # i valori funzionano come nella funzione range . start, end, step
 #[::-1] reverse
