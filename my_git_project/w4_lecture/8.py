@@ -7,12 +7,12 @@ def run():
     x = steps()
     good_steps = []
     bad_steps = []
-    max(x) = 50
+
     for f in x:
-        if f >= max(x):
-         good_steps.append(f)
-        else :
+        if f[1] >= 50:
          bad_steps.append(f)
+        else :
+         good_steps.append(f)
     print(f"Good steps:",len(good_steps), "Bad steps:",len(bad_steps))
 
 run()
