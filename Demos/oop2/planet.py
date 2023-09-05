@@ -5,11 +5,17 @@ class Planet:
 
     def __init__(self, n= "Planet"):
         self.name = n
-        self.inhabitants = {"humans":[], "robots":[]}
+        self.inhabitants = []
 
     def __str__(self):
-        x = [name for name in self.inhabitants["humans"]]
-        y = [name for name in self.inhabitants["robots"]]
+        x=[]
+        y=[]
+        for dude in self.inhabitants:
+            if isinstance(dude, Human):
+                x.append(dude)
+            elif isinstance(dude, Robot):
+                y.append(dude)
+
         return f"{self.name} contains : \nHumans: {x}\nRobots: {y}\n\n"
 
 
@@ -17,24 +23,14 @@ class Planet:
         return f"Planet(name ={self.name}, inhabitants={self.inhabitants})"
 
     def add_inhabitant(self, inh):
-        if isinstance(inh, Human):
-            self.inhabitants["humans"].append(inh)
-        elif isinstance(inh,Robot):
-            self.inhabitants["robots"].append(inh)
+       self.inhabitants.append(inh)
 
-    # def add_robot(self,r):
-    #     if isinstance(r, Robot):
-    #         self.robots.append(r)
-    #
-    # def remove_human(self, h):
-    #     if h in self.humans:
-    #         self.humans.remove(h)
 
     def remove_inhabitant(self,inh):
-        if isinstance(inh, Human):
-            self.inhabitants["humans"].remove(inh)
-        elif isinstance(inh, Robot):
-            self.inhabitants["robots"].remove(inh)
+        if inh in self.inhabitants:
+            self.inhabitants.remove(inh)
+
+
 
 
 if __name__ == "__main__":

@@ -6,8 +6,6 @@ class Robot:
         self.age = a
         self.energy = 0
 
-
-
     def __str__(self):
         return f"Robot named {self.name} is {self.age} years old and has {self.energy} energy"
 
