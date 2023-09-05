@@ -3,7 +3,7 @@ from robot import Robot
 
 class Planet:
 
-    def __init__(self, n= "Planet"):
+    def __init__(self, n="Planet"):
         self.name = n
         self.inhabitants = []
 
@@ -15,30 +15,25 @@ class Planet:
                 x.append(dude)
             elif isinstance(dude, Robot):
                 y.append(dude)
-
-        return f"{self.name} contains : \nHumans: {x}\nRobots: {y}\n\n"
-
+        return f"{self.name} contains: \nHumans: {x}\nRobots: {y}\n\n"
 
     def __repr__(self):
-        return f"Planet(name ={self.name}, inhabitants={self.inhabitants})"
+        return f"Planet(name={self.name}, inhabitants={self.inhabitants})"
 
-    def add_inhabitant(self, inh):
-       self.inhabitants.append(inh)
+    def add(self, inh):
+        self.inhabitants.append(inh)
 
-
-    def remove_inhabitant(self,inh):
+    def remove(self, inh):
         if inh in self.inhabitants:
             self.inhabitants.remove(inh)
 
 
-
-
 if __name__ == "__main__":
-    h1 = Human("Bob",23)
-    h2 = Human("Betty",28)
-    r1 = Human("Wall-E",22)
-    r2 = Human("Robocop",34)
-    mars = Planet()
+    h1 = Human("Bob", 23)
+    h2 = Human("Betty", 28)
+    r1 = Robot("Wall-E", 2)
+    r2 = Robot("RoboCop", 34)
+    mars = Planet("Mars")
     print(mars)
     mars.add_inhabitant(r1)
     mars.add_inhabitant(r2)

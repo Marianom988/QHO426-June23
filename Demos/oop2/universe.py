@@ -26,10 +26,11 @@ class Universe:
             planet = self.planets[i]
             n_humans = len(planet.inhabitants["humans"])
             n_robots = len(planet.inhabitants["robots"])
-            ax = fig.add_subplot(n_planets,1, i+1)
+            ax = fig.add_subplot(n_planets, 1, i+1)
             ax.bar(["Humans", "Robots"], [n_humans, n_robots])
         plt.tight_layout()
         plt.show()
+
 
 
 if __name__ == "__main__":
@@ -37,4 +38,3 @@ if __name__ == "__main__":
     for i in range(6):
         u.generate("Jupiter")
     u.show_population()
-
